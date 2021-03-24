@@ -1,0 +1,16 @@
+sudo: true
+language: python
+arch:
+  - arm64
+  - amd64
+matrix:
+  include:
+    - python: 2.7
+    - python: 3.3
+    - python: 3.4
+install:
+  - python setup.py install
+  - python -m pip install pytest nose
+script:
+  - pytest
+  - nosetests
