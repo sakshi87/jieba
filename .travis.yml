@@ -1,13 +1,19 @@
 sudo: true
 language: python
-arch:
-  - arm64
-  - amd64
 matrix:
   include:
     - python: 2.7
+      arch: arm64
+    - python: 2.7
+      arch: amd64
     - python: 3.3
+      arch: arm64
+    - python: 3.3
+      arch: amd64
     - python: 3.4
+      arch: arm64
+    - python: 3.4
+      arch: amd64
 install:
   - python setup.py install
   - python -m pip install pytest nose
