@@ -17,6 +17,7 @@ matrix:
 install:
   - python setup.py install
   - python -m pip install pytest nose
+  - pip install whoosh
 script:
   - pytest
   - nosetests
